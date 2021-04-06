@@ -418,11 +418,11 @@ class FloatingSearchAppBarState extends ImplicitlyAnimatedWidgetState<
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: brightness == Brightness.dark
           ? const SystemUiOverlayStyle(
-              statusBarBrightness: Brightness.light,
-              statusBarIconBrightness: Brightness.light)
-          : const SystemUiOverlayStyle(
               statusBarBrightness: Brightness.dark,
-              statusBarIconBrightness: Brightness.dark),
+              statusBarIconBrightness: Brightness.dark)
+          : const SystemUiOverlayStyle(
+              statusBarBrightness: Brightness.light,
+              statusBarIconBrightness: Brightness.light),
       child: NotificationListener<ScrollNotification>(
         onNotification: (notification) {
           if (notification.metrics.axis != Axis.vertical) return false;
