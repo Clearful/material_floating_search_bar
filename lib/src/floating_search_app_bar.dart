@@ -589,6 +589,7 @@ class FloatingSearchAppBarState extends ImplicitlyAnimatedWidgetState<
           style: style.queryStyle,
           textInputAction: widget.textInputAction,
           keyboardType: widget.textInputType,
+          keyboardAppearance: widget.brightness ?? Brightness.light,
           onSubmitted: widget.onSubmitted,
           decoration: InputDecoration(
             isDense: true,
