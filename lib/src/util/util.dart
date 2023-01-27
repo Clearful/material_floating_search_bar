@@ -5,8 +5,7 @@ export 'handler.dart';
 
 // ignore_for_file: public_member_api_docs
 
-double interval(double begin, double end, double t,
-    {Curve curve = Curves.linear}) {
+double interval(double begin, double end, double t, {Curve curve = Curves.linear}) {
   if (t < begin) return 0.0;
   if (t > end) return 1.0;
 
@@ -15,5 +14,5 @@ double interval(double begin, double end, double t,
 }
 
 void postFrame(VoidCallback callback) {
-  WidgetsBinding.instance?.addPostFrameCallback((_) => callback());
+  WidgetsBinding.instance.addPostFrameCallback((_) => callback());
 }

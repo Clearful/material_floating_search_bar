@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart'
-    hide ImplicitlyAnimatedWidget, ImplicitlyAnimatedWidgetState;
+import 'package:flutter/material.dart' hide ImplicitlyAnimatedWidget, ImplicitlyAnimatedWidgetState;
 
 // ignore_for_file: public_member_api_docs
 
@@ -14,10 +13,9 @@ abstract class ImplicitlyAnimatedWidget extends StatefulWidget {
   ) : super(key: key);
 }
 
-abstract class ImplicitlyAnimatedWidgetState<T,
-        W extends ImplicitlyAnimatedWidget> extends State<W>
+abstract class ImplicitlyAnimatedWidgetState<T, W extends ImplicitlyAnimatedWidget> extends State<W>
     with TickerProviderStateMixin {
-  late final _controller = AnimationController(
+  late final AnimationController _controller = AnimationController(
     duration: widget.duration,
     vsync: this,
   )
